@@ -1,0 +1,16 @@
+##Mysql数据库配置
+datasource:
+  master:
+    url: jdbc:mysql://60.205.212.196:3306/cloud_disk?useUnicode=yes&characterEncoding=UTF-8&useSSL=false
+    driverClassName: com.mysql.jdbc.Driver
+    username: disk
+    password: 123456
+
+
+file:
+  seeUrl: http://localhost:8012/disk/
+
+
+ribbon:
+  ReadTimeout: 100000
+  ConnectTimeout: 100000

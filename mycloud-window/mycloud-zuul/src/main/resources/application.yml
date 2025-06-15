@@ -1,0 +1,36 @@
+# Tomcat
+server:
+  tomcat:
+    uri-encoding: UTF-8
+  port: 8888
+  servlet:
+    context-path: /
+
+# mysql
+spring:
+  # 环境 dev|test|prod
+  application:
+    name: service-zuul
+  profiles:
+    active: dev
+  servlet:
+    multipart:
+      max-file-size: 100MB
+      max-request-size: 100MB
+      enabled: true
+  redis:
+    database: 0
+    host: 60.205.212.196
+    port: 6379
+
+eureka:
+  client:
+    register-with-eureka: true
+    fetch-registry: true
+
+
+#zuul:
+#  routes:
+#    api-a:
+#      path: /api-tag/**
+#      serviceId: tag-client
